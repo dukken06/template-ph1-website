@@ -1,0 +1,82 @@
+/* すべてのページに適用される設定 */
+* {
+    border-style: solid;
+    border-width: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+/* すべてのページに適用 - ヘッダー */
+img {
+    max-width: 100%;
+}
+img {
+    vertical-align: bottom;
+}
+.p-header {
+    align-items: center;
+    background-color: #fff;
+    display: flex;
+    padding: 15px 24px;
+}
+.p-header__inner {
+    align-items: center;
+    margin-left: auto;
+    display: flex;
+}
+.p-header__nav__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+.p-header__sns {
+    margin-left: 32px;
+}
+.p-sns {
+    display: flex;
+    gap: 16px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin: 0;
+
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.p-header__nav__item__link {
+    color: #666;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: auto 0;
+    display: block;
+}
+.p-sns__item__link {
+    align-items: center;
+    border: solid 1px #eee;
+    border-radius: 50%;
+    color: #adadad;
+    display: inline-flex;
+    font-size: 24px;
+    height: 50px;
+    justify-content: center;
+    width: 50px;
+}
+
+/* すべてのページに適用 - ヒーロー */
+
+/* すべてのページに適用 - メイン */
+
+/* すべてのページに適用 - フッター */
+
+/* 個別のスタイル */
+
+/* index.html */
+
+/* quiz.html */
