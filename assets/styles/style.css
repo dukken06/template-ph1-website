@@ -25,8 +25,11 @@ img {
     display: flex;
     padding: 15px 24px;
     height: 80px;
-    width: auto;
-    margin: 0;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 1;
 }
 .p-header__inner {
     align-items: center;
@@ -146,7 +149,9 @@ h1 {
 }
 
 /* すべてのページに適用 - メイン */
-
+.l-main {
+    margin-top: 80px;
+}
 /* すべてのページに適用 - メイン - POSSEとは */
 .p-heading {
     font-size: 36px;
