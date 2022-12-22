@@ -172,7 +172,9 @@ h1 {
     margin-top: 80px;
 }
 /* すべてのページに適用 - メイン - クイズ */
-
+.p-quiz-container.l-container {
+    margin-top: 120px;
+}
 
 /* すべてのページに適用 - メイン - POSSEとは */
 .p-heading {
