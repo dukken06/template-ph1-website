@@ -147,6 +147,10 @@ h1 {
     height: 8px;
     width: 8px;
 }
+/* すべてのページに適用 - ヒーロー - クイズ */
+.p-quiz-hero {
+    
+}
 
 /* すべてのページに適用 - メイン */
 .l-main {
@@ -192,6 +196,7 @@ h1 {
 }
 .l-container {
     margin: 0 auto;
+    padding: 0 24px;
     max-width: 1032px;
     width: 100%;
 }
@@ -219,6 +224,7 @@ h1 {
 }
 .p-line__title {
     gap: 8px;
+    margin-top: 0;
 }
 .p-heading {
     font-size: 36px;
