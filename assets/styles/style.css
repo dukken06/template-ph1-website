@@ -149,13 +149,31 @@ h1 {
 }
 /* すべてのページに適用 - ヒーロー - クイズ */
 .p-quiz-hero {
-    
+    background: url(../img/quiz/bg-hero.jpg) center center/cover;
+    padding: 110px 0 76px;
+}
+.p-quiz-hero {
+    color: #fff;
+    font-weight: bold;
+}
+.p-quiz-hero__title__label {
+    font-size: 18px;
+    line-height: 1.8;
+}
+.p-quiz-hero__title__inline {
+    font-size: 60px;
+    display: block;
+    line-height: 1.5;
+    margin-top: 12px;
 }
 
 /* すべてのページに適用 - メイン */
 .l-main {
     margin-top: 80px;
 }
+/* すべてのページに適用 - メイン - クイズ */
+
+
 /* すべてのページに適用 - メイン - POSSEとは */
 .p-heading {
     font-size: 36px;
