@@ -25,8 +25,11 @@ img {
     display: flex;
     padding: 15px 24px;
     height: 80px;
-    width: auto;
-    margin: 0;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 1;
 }
 .p-header__inner {
     align-items: center;
@@ -144,8 +147,113 @@ h1 {
     height: 8px;
     width: 8px;
 }
+/* すべてのページに適用 - ヒーロー - クイズ */
+.p-quiz-hero {
+    background: url(../img/quiz/bg-hero.jpg) center center/cover;
+    padding: 110px 0 76px;
+}
+.p-quiz-hero {
+    color: #fff;
+    font-weight: bold;
+}
+.p-quiz-hero__title__label {
+    font-size: 18px;
+    line-height: 1.8;
+}
+.p-quiz-hero__title__inline {
+    font-size: 60px;
+    display: block;
+    line-height: 1.5;
+    margin-top: 12px;
+}
 
 /* すべてのページに適用 - メイン */
+.l-main {
+    margin-top: 80px;
+}
+/* すべてのページに適用 - メイン - クイズ */
+.p-quiz-container.l-container {
+    margin-top: 120px;
+}
+.p-quiz-box__label {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 8px 16px;
+    background-color: #0071bc;
+    border-radius: 8px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+}
+.p-quiz-box__question__title__text {
+    font-size: 36px;
+    line-height: 1.5;
+    margin-top: 24px;
+    display: block;
+    font-weight: bold;
+}
+.p-quiz-box__question__image {
+    margin-top: 64px;
+    margin: 24px auto 0;
+    max-width: 718px;
+}
+img {
+    vertical-align: bottom;
+    max-width: 100%;
+}
+.p-quiz-box__answer {
+    margin-top: 64px;
+}
+.p-quiz-box__label--accent {
+    background-color: #e34e70;
+}
+.p-quiz-box__answer__list {
+    display: grid;
+    margin-top: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0;
+}
+.p-quiz-box__answer__button {
+    font-size: 18px;
+    padding: 19px;
+    align-items: center;
+    border: solid 4px #eee;
+    border-radius: 8px;
+    font-weight: bold;
+    line-height: 1.8;
+    text-align: left;
+    width: 100%;
+    border-width: 5px;
+    background-color: transparent;
+    position: relative;
+}
+.u-icon__arrow__image {
+    height: 16px;
+    position: absolute;
+    right: 19px;
+    top: 25px;
+}
+button {
+    cursor: pointer;
+}
+.p-quiz-box__note {
+    font-size: 18px;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    display: flex;
+    font-style: normal;
+    font-weight: bold;
+    gap: 16px;
+    line-height: 1.8;
+    margin-top: 16px;
+    padding: 24px;
+}
+.u-icon__note__image {
+    vertical-align: middle;
+}
 
 /* すべてのページに適用 - メイン - POSSEとは */
 .p-heading {
@@ -187,6 +295,7 @@ h1 {
 }
 .l-container {
     margin: 0 auto;
+    padding: 0 24px;
     max-width: 1032px;
     width: 100%;
 }
@@ -214,6 +323,7 @@ h1 {
 }
 .p-line__title {
     gap: 8px;
+    margin-top: 0;
 }
 .p-heading {
     font-size: 36px;

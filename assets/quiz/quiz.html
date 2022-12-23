@@ -16,6 +16,180 @@
     <!--Google Fonts読み込みここまで-->
 </head>
 <body>
-    
+    <!--ヘッダー-->
+    <header id="js-header" class="l-header p-header">
+        <div class="p-header__logo">
+            <img src="../img/logo.svg" alt="POSSE">
+        </div>
+        <div class="p-header__inner">
+            <nav class="p-header__nav">
+                <ul class="p-header__nav__list">
+                    <li class="p-header__nav_item">
+                        <a href="" class="p-header__nav__item__link">POSSEとは</a>
+                    </li>
+                    <li class="p-header__nav__list">
+                        <a href="../quiz/quiz.html" class="p-header__nav__item__link" >クイズ</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="p-header__sns p-sns">
+                <li class="p-sns__item">
+                    <a href="https://twitter.com/posse_program" target="_blank" rel="noopener noreferrer" class="p-sns__item__link">
+                        <img src="../img/icon/icon-twitter.svg" alt="twitter">
+                    </a>
+                </li>
+                <li class="p-sns__item">
+                    <a href="https://www.instagram.com/posse_programming/" target="_blank" rel="noopener noreferrer" class="p-sns__item__link">
+                        <img src="../img/icon/icon-instagram.svg" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!--ヘッダーここまで-->
+    <!--メイン-->
+    <main class="l-main">
+        <!--ヒーロー画像-->
+        <section class="p-quiz-hero">
+            <div class="l-container">
+                <h1 class="p-quiz-hero__title">
+                    <span class="p-quiz-hero__title__label">
+                        POSSE課題
+                    </span>
+                    <span class="p-quiz-hero__title__inline">
+                        ITクイズ
+                    </span>
+                </h1>
+            </div>
+        </section>
+        <!--ヒーロー画像ここまで-->
+        <!--メイン-->
+        <div class="p-quiz-container l-container">
+            <section class="p-quiz-box js-quiz">
+                <div class="p-quiz-box__question">
+                    <h2 class="p-quiz-box__question__title">
+                        <span class="p-quiz-box__label">
+                            Q1
+                        </span>
+                        <span class="p-quiz-box__question__title__text">
+                            日本のIT人材が2030年には最大どれくらい不足すると言われているでしょうか？
+                        </span>
+                    </h2>
+                    <figure class="p-quiz-box__question__image">
+                        <img src="../img/quiz/img-quiz01.png" alt="">
+                    </figure>
+                </div>
+                <div class="p-quiz-box__answer">
+                    <span class="p-quiz-box__label p-quiz-box__label--accent">
+                        A
+                    </span>
+                    <ul class="p-quiz-box__answer__list">
+                        <li class="p-quiz-box__answer__item">
+                            <button class="p-quiz-box__answer__button js-answer">
+                                約28万人
+                                <img src="../img/icon/icon-arrow.svg" alt="" class="u-icon__arrow__image">
+                            </button>
+                        </li>
+                        <li class="p-quiz-box__answer__item">
+                            <button class="p-quiz-box__answer__button js-answer">
+                                約79万人
+                                    <img src="../img/icon/icon-arrow.svg" alt="" class="u-icon__arrow__image">
+                            </button>
+                        </li>
+                        <li class="p-quiz-box__answer__item">
+                            <button class="p-quiz-box__answer__button js-answer">
+                                約183万人
+                                <img src="../img/icon/icon-arrow.svg" alt="" class="u-icon__arrow__image">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <cite class="p-quiz-box__note">
+                    <img src="../img/icon/icon-note.svg" alt="" class="u-icon__note__image">
+                    経済産業省 2019年3月 － IT 人材需給に関する調査
+                </cite>
+            </section>
+        </div>
+        <!--メインここまで-->
+            <!--POSSEとはここまで-->
+            <!--公式LINE-->
+            <div class="p-line">
+                <div class="l-container">
+                    <div class="p-line__body">
+                        <div class="p-line__body__inner">
+                            <h2 class="p-heading -light p-line__title">
+                                <img src="../img/icon/icon-line.svg" alt="公式LINE" class="p-line__icon">
+                                POSSE 公式LINE
+                            </h2>
+                            <div class="p-line__content">
+                                <p>
+                                    公式LINEにてご質問を随時受け付けております。<br>
+                                    詳細やPOSSE最新情報につきましては、公式LINEにてお知らせ致しますので<br>
+                                    下記ボタンより友達追加をお願いします！
+                                </p>
+                                <div class="p-line__footer">
+                                    <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer" class="p-line__button">
+                                        LINE追加
+                                        <img src="../img/icon/icon-link-gray-dark.svg" alt="" class="u-icon__link">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--公式LINEここまで-->
+        </div>
+        
+        <!--LINE右下-->
+        <a href="https://line.me/R/ti/p/@651htnqp?from=page" target="_blank" rel="noopener noreferrer" class="p-fixedLine__link">
+            <img src="../img/icon/icon-line.svg" alt="" class="u-icon__line">
+            <p class="p-fixedLine__link__text">
+                <span class="u-sp-hidden">
+                    POSSE
+                </span>
+                公式LINEで
+                <br>
+                最新情報をGET！
+            </p>
+            <img src="../img/icon/icon-link-light.svg" alt="" class="u-icon__link">
+        </a>
+        <!--LINE右下ここまで-->
+    </main>
+    <!--メインここまで-->
+    <!--フッター-->
+    <footer class="l-footer p-footer">
+        <div class="l-footer__inner">
+            <div class="p-footer__siteinfo">
+                <span class="p-footer__logo">
+                    <img src="../img/logo.svg" alt="POSSE">
+                    </a>
+                </span>
+                <a href="https://posse-ap.com/" target="_blank" rel="noopener noferrer" class="p-footer__siteinfo__link">
+                    POSSE公式サイト
+                </a>
+            </div>
+            <div class="p-footer__sns">
+                <ul class="p-sns__list p-footer__sns__list">
+                    <li class="p-sns__item">
+                        <a href="https://twitter.com/posse_program" target="_blank" rel="noopener noreferrer" class="p-sns__item__link" aria-label="Twitter">
+                            <img src="../img/icon/icon-twitter.svg" alt="Twitter">
+                        </a>
+                    </li>
+                    <li class="p-sns__item">
+                        <a href="https://www.instagram.com/posse_programming/" target="_blank" rel="noopener noreferrer" class="p-sns__item__link" aria-label="instagram">
+                            <img src="../img/icon/icon-instagram.svg" alt="instagram">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="p-footer__copyright">
+            <small lang="en">
+                ©2022 POSSE
+            </small>
+        </div>
+    </footer>
+    <!--フッターここまで-->
 </body>
 </html>
