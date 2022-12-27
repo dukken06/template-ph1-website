@@ -228,6 +228,7 @@ img {
     border-width: 5px;
     background-color: transparent;
     position: relative;
+    color: black;
 }
 .u-icon__arrow__image {
     height: 16px;
@@ -253,6 +254,53 @@ button {
 }
 .u-icon__note__image {
     vertical-align: middle;
+}
+.p-quiz-box__answer__button:disabled .u-icon__arrow__image {
+    display: none;
+}
+.p-quiz-box__answer__button.is-selected {
+    background-color: #eff2f5;
+    border-color: #0071bc;
+    color: #0071bc;
+}
+.p-quiz-box__answer__correct {
+    background-color: #fff2f5;
+    border-radius: 8px;
+    display: none;
+    margin-top: 16px;
+    padding: 24px 40px;
+}
+.p-quiz-box__answer__correct.is-correct {
+    display: block;
+}
+.p-quiz-box__answer__correct.is-incorrect {
+    background-color: #eff2f5;
+    display: block;
+}
+.p-quiz-box__answer__correct__title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+}
+.is-correct .p-quiz-box__answer__correct__title {
+    color: #e34e70;
+}
+.is-incorrect .p-quiz-box__answer__correct__title {
+    color: #0071bc;
+}
+.p-quiz-box__answer__correct__content {
+    align-items: baseline;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 18px;
+    line-height: 1.8;
+    margin-top: 16px;
+}
+.p-quiz-box__answer__correct__content__label {
+    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+    font-size: 24px;
 }
 
 /* すべてのページに適用 - メイン - POSSEとは */

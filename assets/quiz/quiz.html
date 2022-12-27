@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
-    <script src="../assets/scripts/common.js" defer=""></script>
+    <script src="../scripts/quiz.js" defer></script>
     <!--Google Fonts読み込みここまで-->
 </head>
 <body>
@@ -65,7 +65,7 @@
         <!--ヒーロー画像ここまで-->
         <!--メイン-->
         <div class="p-quiz-container l-container">
-            <section class="p-quiz-box js-quiz">
+            <section class="p-quiz-box js-quiz" data-quiz="0">
                 <div class="p-quiz-box__question">
                     <h2 class="p-quiz-box__question__title">
                         <span class="p-quiz-box__label">
@@ -85,24 +85,31 @@
                     </span>
                     <ul class="p-quiz-box__answer__list">
                         <li class="p-quiz-box__answer__item">
-                            <button class="p-quiz-box__answer__button js-answer">
+                            <button class="p-quiz-box__answer__button js-answer" data-answer="0">
                                 約28万人
                                 <img src="../img/icon/icon-arrow.svg" alt="" class="u-icon__arrow__image">
                             </button>
                         </li>
                         <li class="p-quiz-box__answer__item">
-                            <button class="p-quiz-box__answer__button js-answer">
+                            <button class="p-quiz-box__answer__button js-answer" data-answer="1">
                                 約79万人
                                     <img src="../img/icon/icon-arrow.svg" alt="" class="u-icon__arrow__image">
                             </button>
                         </li>
                         <li class="p-quiz-box__answer__item">
-                            <button class="p-quiz-box__answer__button js-answer">
+                            <button class="p-quiz-box__answer__button js-answer" data-answer="2">
                                 約183万人
                                 <img src="../img/icon/icon-arrow.svg" alt="" class="u-icon__arrow__image">
                             </button>
                         </li>
                     </ul>
+                    <div class="p-quiz-box__answer__correct js-answerBox">
+                        <p class="p-quiz-box__answer__correct__title js-answerTitle"></p>
+                        <p class="p-quiz-box__answer__correct__content">
+                            <span class="p-quiz-box__answer__correct__content__label">A</span>
+                            <span class="js-answerText"></span>
+                        </p>
+                    </div>
                 </div>
                 <cite class="p-quiz-box__note">
                     <img src="../img/icon/icon-note.svg" alt="" class="u-icon__note__image">
