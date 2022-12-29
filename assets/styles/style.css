@@ -175,6 +175,9 @@ h1 {
 .p-quiz-container.l-container {
     margin-top: 120px;
 }
+.p-quiz-box {
+    margin-top: 120px;
+}
 .p-quiz-box__label {
     font-size: 36px;
     font-weight: bold;
@@ -230,7 +233,7 @@ img {
     position: relative;
     color: black;
 }
-.u-icon__arrow__image {
+.u-icon__arrow {
     height: 16px;
     position: absolute;
     right: 19px;
@@ -252,10 +255,10 @@ button {
     margin-top: 16px;
     padding: 24px;
 }
-.u-icon__note__image {
+.u-icon__note {
     vertical-align: middle;
 }
-.p-quiz-box__answer__button:disabled .u-icon__arrow__image {
+.p-quiz-box__answer__button:disabled .u-icon__arrow {
     display: none;
 }
 .p-quiz-box__answer__button.is-selected {
