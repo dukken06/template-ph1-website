@@ -19,6 +19,13 @@ img {
 }
 
 /* すべてのページに適用 - ヘッダー */
+.l-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
 .p-header {
     align-items: center;
     background-color: #fff;
@@ -26,10 +33,6 @@ img {
     padding: 15px 24px;
     height: 80px;
     width: 100%;
-    top: 0px;
-    left: 0px;
-    position: fixed;
-    z-index: 1;
 }
 .p-header__inner {
     align-items: center;
@@ -80,7 +83,126 @@ ul {
     justify-content: center;
     width: 50px;
 }
+.p-header__button {
+    height: 40px;
+    position: fixed;
+    right: 19px;
+    top: 8px;
+    width: 40px;
+    z-index: 1000;
+    display: none;
+    background-color: #fff;
+}
+.p-header__button::before, .p-header__button::after {
+    background-color: #333;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 34px;
+    position: absolute;
+    left: 50%;
+    transition: transform 0.4s, top 0.4s;
+}
+.p-header__button::before {
+    top: 12px;
+    transform: translate(-50%, 0);
+}
+.p-header__button::after {
+    top: 27px;
+    transform: translate(-50%, 0);
+}
+.p-header.is-open .p-header__button::before {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.p-header.is-open .p-header__button::after {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.p-header__official {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: auto;
+}
+.p-header__official__link--line {
+    background-color: #5FDF5B;
+    border-radius: 5em;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 16px;
+    text-align: center;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.p-header__official__link--line .u-icon__line {
+    height: 28px;
+    margin-right: 8px;
+    align-items: center;
+    background: radial-gradient(#fff 60%, transparent 60%);
+    position: relative;
+}
+.p-header__official__link--line .u-icon__link {
+    height: 18px;
+    align-items: center;
+    transform: translate(0, -50%);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
 
+/* SP */
+@media not screen and (min-width: 768px) {
+    .p-header__inner {
+        background-color: #fff;
+        flex-direction: column;
+        opacity: 0;
+        padding: 136px 16px 40px;
+        transition: opacity 0.4s, visibility 0.4s;
+        visibility: hidden;
+    }
+    .p-header__inner {
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 56px;
+    }
+    .p-header__nav__list {
+        align-items: center;
+        flex-direction: column;
+    }
+    .p-header__nav__item__link {
+        font-size: 24px;
+        color: #333;
+        font-weight: bold;
+    }
+    .p-header__sns {
+        align-items: center;
+        gap: 24px;
+        margin-top: 70%;
+    }
+    .p-header__button {
+        display: block;
+        top: 21px;
+    }
+    .p-header.is-open .p-header__inner {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+@media screen and (min-width: 768px) {
+    .p-header__button {
+        display: none;
+    }
+    .p-header__official {
+        display: none;
+    }
+}
 /* すべてのページに適用 - ヒーロー */
 .p-top-hero__inner {
     display: flex;
