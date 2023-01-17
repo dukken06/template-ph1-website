@@ -1,3 +1,11 @@
+//メニュー
+const Header = document.getElementById('js-header');
+const HeaderButton = document.getElementById('js-headerButton');
+
+HeaderButton.addEventListener('click', () => {
+    Header.classList.toggle('is-open')
+})
+
 //クイズの問題と回答
 const ALL_QUIZ = [
     {
