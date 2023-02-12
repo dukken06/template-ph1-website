@@ -32,12 +32,66 @@ header {
     border-radius: 20px;
     background: linear-gradient(to right, #0f71bc 0%, #3ccfff 100%);
     cursor: pointer;
-    -webkit-filter: drop-shadow(2px 2px 2px #a3d0f2);
+    filter: drop-shadow(2px 2px 2px #a3d0f2);
 }
 .header__button span {
     line-height: 40px;
     color: #fff;
 }
 main {
-    
+    background-color: #f5f5f8;
+}
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.container__hours {
+    display: grid;
+    grid-template-rows: 100px 400px;
+    gap: 20px;
+}
+.container__hours__data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.container__hours__day {
+    background-color: #fff;
+    border-radius: 10px;
+}
+.container__hours__month {
+    background-color: #fff;
+    border-radius: 10px;
+}
+.container__hours__total {
+    background-color: #fff;
+    border-radius: 10px;
+}
+.container__hours__graph {
+    background-color: #fff;
+    border-radius: 10px;
+}
+.container__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 520px;
+}
+.container__content__language {
+    background-color: #fff;
+    border-radius: 10px;
+}
+.container__content__material {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+
+.month p {
+    text-align: center;
+    margin: 20px;
 }
