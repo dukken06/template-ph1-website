@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
 </head>
-<body>
+<body class="m-container">
+    <!--ヘッダー-->
     <header>
         <div class="header__inner">
             <div>
@@ -28,8 +29,11 @@
         </div>
     </header>
     <main>
+        <!--メイン-->
         <div class="container">
+            <!--学習時間-->
             <div class="container__hours">
+                <!--学習時間 数値-->
                 <div class="container__hours__data">
                     <div class="container__hours__day">
                         <p class="data__title">
@@ -65,11 +69,13 @@
                         </p>
                     </div>
                 </div>
+                <!--学習時間 グラフ-->
                 <div class="container__hours__graph">
                     
                 </div>
             </div>
             <div class="container__content">
+                <!--学習内容-->
                 <div class="container__content__language">
                     <h2>
                         学習言語
@@ -82,6 +88,7 @@
                 </div>
             </div>
         </div>
+        <!--月 表示-->
         <div class="month">
             <p>
                 <i class="fa-solid fa-angle-left"></i>
@@ -90,6 +97,14 @@
                 &nbsp;&nbsp;&nbsp;
                 <i class="fa-solid fa-angle-right"></i>
             </p>
+        </div>
+        <!--モーダル 表示-->
+        <div class="modal">
+            <div class="modal__content">
+                <div class="modal__close__button">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
         </div>
     </main>
 </body>
