@@ -32,7 +32,6 @@ header {
 }
 .header__button {
     margin-left: auto;
-    background-color: #0f71bc;
     width: 180px;
     height: 40px;
     text-align: center;
@@ -218,4 +217,139 @@ main {
     line-height: 36px;
     margin-left: 12px;
     color: #5b5b5a;
+}
+/*モーダル 中身*/
+.r-container {
+    position: absolute;
+    inset: 56px 56px 100px 56px;
+    width: 788px;
+    height: 404px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+.r-container__1 {
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: 80px 114px 162px;
+    gap: 24px;
+}
+.record__date {
+    background-color: #fff;
+    height: 80px;
+}
+.record__date h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+.record__date div {
+    background-color: #f5f5f8;
+    height: 60px;
+    border-radius: 10px;
+}
+.record__content {
+    background-color: #fff;
+    height: 114px;
+}
+.record__content h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.record__content div {
+    background-color: #fff;
+    height: 92px;
+    background-color: #555;
+}
+.record__language {
+    background-color: #fff;
+}
+.record__language h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.record__language div {
+    background-color: #fff;
+    height: 140px;
+    background-color: #555;
+}
+.r-container__2 {
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: 356px 42px;
+    gap: 8px;
+}
+.r-container__2__content {
+    display: grid;
+    grid-template-rows: 80px 252px;
+    gap: 24px;
+}
+.record__hours {
+    background-color: #fff;
+    height: 80px;
+}
+.record__hours h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+.record__hours div {
+    background-color: #f5f5f8;
+    height: 60px;
+    border-radius: 10px;
+}
+.record__for__twitter {
+    background-color: #fff;
+    height: 252px;
+}
+.record__for__twitter h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+.record__for__twitter div {
+    background-color: #f5f5f8;
+    height: 224px;
+    border-radius: 10px;
+}
+.share__button {
+    background-color: #fff;
+    height: 40px;
+    position: relative;
+}
+.share__button span {
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 44px;
+}
+.share__button i {
+    font-size: 36px;
+    color: #0f71bc;
+}
+
+/*モーダル ボタン*/
+.modal__record__button {
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    inset: 480px 300px 20px 300px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #0f71bc 0%, #3ccfff 100%);
+    cursor: pointer;
+    user-select: none;
+    filter: drop-shadow(2px 2px 2px #a3d0f2);
+}
+.modal__record__button {
+    line-height: 40px;
+    color: #fff;
 }
