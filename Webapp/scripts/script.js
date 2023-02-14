@@ -64,7 +64,7 @@ for(let w = 0; w < 6; w++) {
             if(dayCount < today) {
                 calendarHtml += '<td class="days-until-today days">' + dayCount +'</td>'
             } else if(dayCount == today) {
-                calendarHtml += '<td class="date-of-today days today">' + '<span>' + dayCount + '</span>' + '</td>'
+                calendarHtml += '<td class="date-of-today days" id="today">' + '<span>' + dayCount + '</span>' + '</td>'
             } else {
                 calendarHtml += '<td class="days">' + dayCount +'</td>'
             }
@@ -105,12 +105,16 @@ monthShow.innerHTML = thisMonth
 //カレンダーの中で選ぶ日を変える
 
 
-// const allDays = document.querySelectorAll('.days');
+const allDays = document.querySelectorAll('.days');
+const thisDay = document.getElementById('today')
 
-
-// allDays.forEach(day, () => {
-//     day.addEventListener('click', () => {
-//         day.classList.add('date-of-today');
-        
-//     })
-// })
+allDays.forEach(day => {
+    day.addEventListener('click', dayClicked => {
+        thisDay.classList.remove('date-of-today');
+        dayClicked.classList.add('is-chosen');
+        // allDays.classList.remove('date-of-today');
+        // if((allDays.classList.contains('is-chosen') == true) && (allDays != dayClicked)) {
+        //     allDays.classList.remove('is-chosen');
+        // }
+    })
+})

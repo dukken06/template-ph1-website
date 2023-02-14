@@ -494,6 +494,11 @@ td {
 .days-until-today {
     color: rgb(175, 172, 172);
 }
+.days.is-chosen {
+    background-color: #3b93d5;
+    color: white;
+    border-radius: 50%;
+}
 
 .date__button {
     margin-left: auto;
