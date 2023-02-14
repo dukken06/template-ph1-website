@@ -275,8 +275,32 @@ main {
 .record__content div {
     background-color: #fff;
     height: 92px;
-    background-color: #555;
 }
+.record__content__wrapper {
+    margin: 0;
+    padding: 0;
+}
+.c-box {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.c-box-item {
+    list-style: none;
+    background-color: #f5f5f8;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 18px;
+}
+.c-box-item i {
+    color: #cccccc;
+    font-size: 20px;
+    line-height: 36px;
+}
+
 .record__language {
     background-color: #fff;
 }
@@ -289,8 +313,32 @@ main {
 .record__language div {
     background-color: #fff;
     height: 140px;
-    background-color: #555;
 }
+.record__language__wrapper {
+    margin: 0;
+    padding: 0;
+}
+.l-box {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.l-box-item {
+    list-style: none;
+    background-color: #f5f5f8;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 18px;
+}
+.l-box-item i {
+    color: #cccccc;
+    font-size: 20px;
+    line-height: 36px;
+}
+
 .r-container__2 {
     background-color: #fff;
     display: grid;
