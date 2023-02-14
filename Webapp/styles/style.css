@@ -170,6 +170,10 @@ main {
     font-size: 15px;
     font-weight: 600;
 }
+.month span {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 /*モーダル*/
 .m-container {
     position: relative;
@@ -248,6 +252,15 @@ main {
     background-color: #f5f5f8;
     height: 60px;
     border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.record__date div p {
+    margin: 0;
+    font-size: 14px;
+    position: absolute;
+    top: 21px;
+    left: 20px;
 }
 .record__content {
     background-color: #fff;
@@ -257,7 +270,7 @@ main {
     font-size: 14px;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 .record__content div {
     background-color: #fff;
@@ -271,7 +284,7 @@ main {
     font-size: 14px;
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 .record__language div {
     background-color: #fff;
@@ -350,6 +363,103 @@ main {
     filter: drop-shadow(2px 2px 2px #a3d0f2);
 }
 .modal__record__button {
+    line-height: 40px;
+    color: #fff;
+}
+/*カレンダー*/
+.calendar__modal {
+    display: none;
+    position: absolute;
+    inset: 0;
+}
+.m-container.openCalendar .calendar__modal {
+    display: block;
+}
+.calendar__modal::before {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    inset: 0;
+}
+#calendar {
+    position: absolute;
+    top: 150px;
+    left: calc((100% - 900px) / 2);
+    width: 900px;
+    height: 540px;
+    border-radius: 20px;
+    background-color: #fff;
+    
+    position: relative;
+}
+
+/*カレンダーの内容*/
+h2 {
+    font-size: 15px;
+    font-weight: 550;
+    text-align: center;
+    color: rgb(39, 37, 37);
+    position: absolute;
+    top: 60px;
+    left: 408px;
+}
+table {
+    position: absolute;
+    top: 120px;
+    left: 285px;
+    border-collapse: separate;
+    border-spacing: 12px 6px;
+    table-layout: fixed;
+    width: 330px;
+    height: 250px;
+    margin: 0 auto;
+}
+td {
+    border-width: 0;
+    border: 1px ;
+    padding: 5px;
+    text-align: center;
+}
+.weekdays {
+    color: #97b9d1;
+    font-size: 11px;
+}
+.days {
+    font-weight: 550;
+    font-size: 14px;
+    color: black;
+
+    user-select: none;
+    cursor: pointer;
+}
+.date-of-today {
+    background-color: #3b93d5;
+    color: white;
+    border-radius: 50%;
+}
+.days-until-today {
+    color: rgb(175, 172, 172);
+}
+
+.date__button {
+    margin-left: auto;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #0f71bc 0%, #3ccfff 100%);
+    cursor: pointer;
+    user-select: none;
+    filter: drop-shadow(2px 2px 2px #a3d0f2);
+    position: absolute;
+    bottom: 80px;
+    position: absolute;
+    bottom: 100px;
+    left: 380px;
+}
+.date__button span {
     line-height: 40px;
     color: #fff;
 }
