@@ -94,14 +94,17 @@ dateButton.addEventListener('click', () => {
 
 //カレンダーの日付をテキストボックスに反映
 const dateOfToday = year + '年' + month + '月' + today + '日'
+const thisMonth = year + '年' + month + '月'
 const TextBoxToday = document.querySelector('.calendar__show__text__box');
 const monthShow = document.querySelector('.month__show');
 
 
 TextBoxToday.innerHTML = dateOfToday
-monthShow.innerHTML = dateOfToday
+monthShow.innerHTML = thisMonth
 
 //カレンダーの中で選ぶ日を変える
+
+
 // const allDays = document.querySelectorAll('.days');
 
 
