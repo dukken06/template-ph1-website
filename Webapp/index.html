@@ -7,6 +7,7 @@
     <title>Webapp</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts" defer></script>
     <script src="scripts/script.js" defer></script>
 </head>
 <body class="m-container">
@@ -80,11 +81,17 @@
                     <h2>
                         学習言語
                     </h2>
+                    <div class="container__content__language__chart">
+
+                    </div>
                 </div>
                 <div class="container__content__material">
                     <h2>
                         学習コンテンツ
                     </h2>
+                    <div class="container__content__material__chart">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,7 +201,7 @@
                                     Twitter用コメント
                                 </h3>
                                 <div>
-
+                                    <textarea name="" id="comment__for__twitter" cols="30" rows="4"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -216,6 +223,21 @@
         <!--カレンダー用モーダル-->
         <div class="calendar__modal">
             <div id="calendar">
+                
+            </div>
+        </div>
+        <!-- ローディング画面のモーダル -->
+        <div class="loading">
+            <div class="loading__content">
+
+            </div>
+        </div>
+        <!-- 記録・投稿完了画面のボタン -->
+        <div class="post__completed">
+            <div class="post__completed__content">
+                <div class="modal__close__button">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
                 
             </div>
         </div>

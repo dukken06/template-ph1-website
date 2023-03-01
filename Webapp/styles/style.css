@@ -56,8 +56,9 @@ main {
 .container {
     width: 85%;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 36px;
     padding-bottom: 0;
+    margin-bottom: -12px;
     background-color: #f5f5f8;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -113,6 +114,7 @@ main {
 .container__hours__graph {
     background-color: #fff;
     border-radius: 10px;
+    padding: 10px;
 }
 /*学習内容*/
 .container__content {
@@ -126,6 +128,9 @@ main {
     background-color: #fff;
     border-radius: 10px;
     position: relative;
+}
+.container__content__language__chart {
+    margin-top: 60px;
 }
 .container__content__language h2 {
     font-size: 18px;
@@ -146,11 +151,14 @@ main {
     top: 30px;
     left: 20px;
 }
+.container__content__material__chart {
+    margin-top: 60px;
+}
 /*月 表示*/
 .month {
     background-color: #f5f5f8;
     height: calc(100% - 64px - 540px);
-    padding-top: 60px;
+    margin-top: 60px;
 }
 .month .fa-angle-left::before {
     font-size: 20px;
@@ -302,6 +310,12 @@ main {
     font-size: 20px;
     line-height: 36px;
 }
+.c-box-item.checked {
+    background-color: #e7f5fd;
+}
+.c-box-item.checked i {
+    color: #0f71bc;
+}
 
 .record__language {
     background-color: #fff;
@@ -341,6 +355,12 @@ main {
     color: #cccccc;
     font-size: 20px;
     line-height: 36px;
+}
+.l-box-item.checked {
+    background-color: #e7f5fd;
+}
+.l-box-item.checked i {
+    color: #0f71bc;
 }
 
 .r-container__2 {
@@ -384,11 +404,19 @@ main {
     height: 224px;
     border-radius: 10px;
 }
+#comment__for__twitter {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f8;
+    border-radius: 10px;
+    border-width: 0;
+}
 .share__button {
     background-color: #fff;
     height: 40px;
     position: relative;
     user-select: none;
+    cursor: pointer;
 }
 .share__button span {
     font-size: 14px;
@@ -398,6 +426,9 @@ main {
 }
 .share__button i {
     font-size: 36px;
+    color: #cccccc;
+}
+.share__button i.checked {
     color: #0f71bc;
 }
 
@@ -520,4 +551,69 @@ td {
 .date__button span {
     line-height: 40px;
     color: #fff;
+}
+/* ローディング用のモーダル */
+.loading {
+    display: none;
+    position: absolute;
+    inset: 0;
+}
+.m-container.openLoading .loading {
+    display: block;
+}
+.loading::before {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    inset: 0;
+}
+.loading__content {
+    position: absolute;
+    top: 150px;
+    left: calc((100% - 900px) / 2);
+    width: 900px;
+    height: 540px;
+    border-radius: 20px;
+    background-color: #fff;
+    
+    position: relative;
+}
+
+/* 記録・投稿完了画面用のモーダル */
+.post__completed {
+    display: none;
+    position: absolute;
+    inset: 0;
+}
+.m-container.openCompleted .post__completed {
+    display: block;
+}
+.post__completed::before {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    inset: 0;
+}
+.post__completed__content {
+    position: absolute;
+    top: 150px;
+    left: calc((100% - 900px) / 2);
+    width: 900px;
+    height: 540px;
+    border-radius: 20px;
+    background-color: #fff;
+    
+    position: relative;
+}
+.post__completed__content .modal__close__button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f5f5f8;
 }
