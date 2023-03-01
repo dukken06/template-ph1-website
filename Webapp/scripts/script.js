@@ -96,7 +96,6 @@ const dateButton = document.querySelector('.date__button')
 dateButton.addEventListener('click', () => {
     container.classList.toggle('openCalendar');
     container.classList.toggle('openModal');
-    
 })
 
 //カレンダーの日付をテキストボックスに反映
@@ -316,15 +315,25 @@ languageItems.forEach(languageItem => {
     })
 })
 
+
 // .share__buttonをclickして、記録・投稿ボタンを押したら、twitter画面を表示し、テキスト内容を反映する関数を作成
 const tweetText = () => {
-    const commentForTwitter = document.getElementById('comment__for__twitter');
-    const textContent = commentForTwitter.value;
-    let url = document.location.href;
+    if(shareButtonCheckbox.classList.contains('checked')) {
+        const commentForTwitter = document.getElementById('comment__for__twitter');
+        const textContent = commentForTwitter.value;
+        let url = document.location.href;
     
-    url = "http://twitter.com/share?url=" + "&text=" + textContent;
-    window.open(url,"_blank");
+        // 投稿日時を表示
+        const dateForTweet = new Date();
+        const yearForTweet = dateForTweet.getFullYear();
+        const monthForTweet = dateForTweet.getMonth() + 1;
+        const todayForTweet = dateForTweet.getDate();
+        const hourForTweet = dateForTweet.getHours();
+        const minutesForTweet = dateForTweet.getMinutes();
     
+        url = "http://twitter.com/share?url=" + yearForTweet + '/' + monthForTweet + '/' + todayForTweet + '/' + hourForTweet + ':' + minutesForTweet + "&text=" + textContent;
+        window.open(url,"_blank");
+    }
 }
 
 
@@ -332,11 +341,12 @@ const tweetText = () => {
 const shareButton = document.querySelector('.share__button');
 const shareButtonCheckbox = document.querySelector('.share__button i');
 
+
+
 shareButton.addEventListener('click', () => {
     shareButtonCheckbox.classList.toggle('checked');
     postButton.addEventListener('click', () => {
-        // console.log(commentForTwitter.value);
-        // window.location.href = 'https://twitter.com/compose/tweet'; 
         tweetText();
+        shareButtonCheckbox.classList.remove('checked');
     })
 })
