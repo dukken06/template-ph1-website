@@ -18,13 +18,6 @@ calendarShow.addEventListener('click', () => {
     container.classList.toggle('openCalendar');
 })
 
-//ローディング画面を表示する
-// const loadingShow = document.querySelector('.modal__record__button')
-
-// loadingShow.addEventListener('click', () => {
-//     container.classList.toggle('openModal');
-//     container.classList.toggle('openLoading');
-// })
 
 
 //カレンダーの中身
@@ -328,7 +321,9 @@ const tweetText = () => {
         const yearForTweet = dateForTweet.getFullYear();
         const monthForTweet = dateForTweet.getMonth() + 1;
         const todayForTweet = dateForTweet.getDate();
+        // 修正(時間) 
         const hourForTweet = dateForTweet.getHours();
+        // 修正(分)
         const minutesForTweet = dateForTweet.getMinutes();
     
         url = "http://twitter.com/share?url=" + yearForTweet + '/' + monthForTweet + '/' + todayForTweet + '/' + hourForTweet + ':' + minutesForTweet + "&text=" + textContent;
@@ -336,12 +331,9 @@ const tweetText = () => {
     }
 }
 
-
 // .share__buttonをclickしたら、.share__button iのcolorが変わる
 const shareButton = document.querySelector('.share__button');
 const shareButtonCheckbox = document.querySelector('.share__button i');
-
-
 
 shareButton.addEventListener('click', () => {
     shareButtonCheckbox.classList.toggle('checked');
@@ -349,4 +341,31 @@ shareButton.addEventListener('click', () => {
         tweetText();
         shareButtonCheckbox.classList.remove('checked');
     })
+})
+
+// ３秒間ローディング画面を表示した後、
+// 記録・投稿完了画面を表示する
+let isClicked = false;
+
+postButton.addEventListener('click', () => {
+    if(isClicked) {
+        return;
+    }
+    isClicked = true;
+    if(isClicked) {
+        container.classList.remove('openModal');
+        container.classList.add('openLoading');
+        
+        setTimeout(() => {
+            container.classList.remove('openLoading');
+            container.classList.add('openCompleted');
+        }, 3000);
+    }
+})
+
+// 記録・投稿画面を非表示
+const closeButtonCompleted = document.querySelector('.post__completed__content .modal__close__button');
+
+closeButtonCompleted.addEventListener('click', () => {
+    container.classList.remove('openCompleted');
 })
