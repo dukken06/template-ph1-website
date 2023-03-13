@@ -167,7 +167,7 @@ var options = {
         colors: ['transparent']
     },
     xaxis: {
-        categories: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+        categories: ['',2,'',4,'',6,'',8,'',10,'',12,'',14,'',16,'',18,'',20,'',22,'',24,'',26,'',28,'',30]
     },
     fill: {
         opacity: 1
@@ -191,13 +191,14 @@ var options = {
     colors: ['#0345EC','#2272BE','#4EBEDF','#54CEF6','#B29EF3','#6D46EC','#5045F0','#3635C0'],
     chart: {
         type: 'donut',
+        height: '70%'
     },
     stroke: {
         width: 0
     },
     dataLabels: {
         style: {
-            fontSize: '6px',
+            fontSize: '10px',
             fontWeight: '300'
         },
         dropShadow: {
@@ -206,8 +207,7 @@ var options = {
     },
     plotOptions: {
         pie: {
-            customScale: 2.4,
-            offsetY: 100,
+            offsetY: 40,
             donut: {
                 size: '50%'
             },
@@ -219,7 +219,7 @@ var options = {
     legend: {
         show: true,
         position: 'bottom',
-        offsetY: 100,
+        offsetY: 70,
         fontSize: '14px',
         horizontalAlign: 'left'
     },
@@ -242,13 +242,14 @@ var options = {
     colors: ['#0345EC','#2272BE','#4EBEDF'],
     chart: {
         type: 'donut',
+        height: '66%'
     },
     stroke: {
         width: 0
     },
     dataLabels: {
         style: {
-            fontSize: '6px',
+            fontSize: '10px',
             fontWeight: '300'
         },
         dropShadow: {
@@ -257,8 +258,7 @@ var options = {
     },
     plotOptions: {
         pie: {
-            customScale: 1.9,
-            offsetY: 90,
+            offsetY: 40,
             donut: {
                 size: '50%'
             },
@@ -270,7 +270,7 @@ var options = {
     legend: {
         show: true,
         position: 'bottom',
-        offsetY: 100,
+        offsetY: 70,
         fontSize: '14px',
         horizontalAlign: 'left'
     },
@@ -321,12 +321,16 @@ const tweetText = () => {
         const yearForTweet = dateForTweet.getFullYear();
         const monthForTweet = dateForTweet.getMonth() + 1;
         const todayForTweet = dateForTweet.getDate();
-        // 修正(時間) 
         const hourForTweet = dateForTweet.getHours();
-        // 修正(分)
-        const minutesForTweet = dateForTweet.getMinutes();
-    
-        url = "http://twitter.com/share?url=" + yearForTweet + '/' + monthForTweet + '/' + todayForTweet + '/' + hourForTweet + ':' + minutesForTweet + "&text=" + textContent;
+        
+        if(dateForTweet.getMinutes() < 10) {
+            const minutesForTweet = '0' + String(dateForTweet.getMinutes());
+            console.log(minutesForTweet);
+            url = "http://twitter.com/share?url=" + yearForTweet + '/' + monthForTweet + '/' + todayForTweet + '/' + hourForTweet + ':' + minutesForTweet + "&text=" + textContent;
+        } else {
+            const minutesForTweet = dateForTweet.getMinutes();
+            url = "http://twitter.com/share?url=" + yearForTweet + '/' + monthForTweet + '/' + todayForTweet + '/' + hourForTweet + ':' + minutesForTweet + "&text=" + textContent;
+        }
         window.open(url,"_blank");
     }
 }
@@ -368,4 +372,12 @@ const closeButtonCompleted = document.querySelector('.post__completed__content .
 
 closeButtonCompleted.addEventListener('click', () => {
     container.classList.remove('openCompleted');
+    location.reload();
+})
+
+// .record__button__responsiveをclickしたら、.m-containerにopenModalを付与して、.modalが表示される
+const buttonResponsive = document.querySelector('.record__button__responsive');
+
+buttonResponsive.addEventListener('click', () => {
+    container.classList.toggle('openModal');
 })
