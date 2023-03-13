@@ -55,6 +55,7 @@ main {
 }
 .container {
     width: 85%;
+    box-sizing: border-box;
     margin: 0 auto;
     padding-top: 36px;
     padding-bottom: 0;
@@ -156,6 +157,8 @@ main {
 }
 /*月 表示*/
 .month {
+    box-sizing: border-box;
+
     background-color: #f5f5f8;
     height: calc(100% - 64px - 540px);
     margin-top: 60px;
@@ -280,13 +283,12 @@ main {
     margin-top: 0;
     margin-bottom: 6px;
 }
-.record__content div {
-    background-color: #fff;
-    height: 92px;
-}
+
 .record__content__wrapper {
     margin: 0;
     padding: 0;
+    background-color: #fff;
+    height: 92px;
 }
 .c-box {
     padding-left: 0;
@@ -687,4 +689,271 @@ td {
     text-align: center;
     font-size: 18px;
     margin-top: 20px;
+}
+.record__button__responsive {
+    display: none;
+}
+/* レスポンシブ */
+/* ここから */
+
+@media screen and (max-width: 768px) {
+    .header__button {
+        display: none;
+    }
+    main {
+        background-color: #f5f5f8;
+    }
+    .container {
+        padding-top: 20px;
+        display: block;
+        height: 1100px;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+    .container__hours {
+        display: block;
+    }
+    .container__hours__data {
+        margin-bottom: 32px;
+    }
+    .container__hours__graph {
+        margin-top: 32px;
+    }
+    .container__content {
+        margin-top: 16px;
+    }
+    .month {
+        margin-top: -34px;
+        padding-top: 40px;
+        width: 100%;
+        height: 40px;
+    }
+    .month p {
+        text-align: center;
+        width: 100%;
+    }
+    .button__area {
+        box-sizing: border-box;
+
+        width: 100%;
+        height: 100px;
+        margin: 0;
+        padding-top: 20px;
+        padding-right: 40px;
+        padding-bottom: 20px;
+        background-color: #f5f5f8;
+    }
+    .record__button__responsive {
+        display: block;
+        margin-top: 20px;
+        margin-left: calc(10% + 20px);
+        margin-right: 10%;
+        width: 80%;
+        height: 40px;
+        text-align: center;
+        border-radius: 20px;
+        background: linear-gradient(to right, #0f71bc 0%, #3ccfff 100%);
+        cursor: pointer;
+        user-select: none;
+        filter: drop-shadow(2px 2px 2px #a3d0f2);
+    }
+    .record__button__responsive span {
+        line-height: 40px;
+        color: #fff;
+    }
+    .modal::before {
+        height: 100%;
+        position: fixed;
+        inset: 0;
+    }
+    .modal__content {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: calc(100% - 64px);
+        border-radius: 20px 20px 0 0;
+    }
+    .r-container {
+        display: block;
+        width: 80vw;
+        margin: 0;
+        height: 84vh;
+    }
+    .r-container__1 {
+        display: block;
+        height: 30vh;
+    }
+    /* 日付の入力 */
+    .record__date {
+        height: 50px;
+    }
+    .record__date h3 {
+        height: 16px;
+        margin: 4px;
+        font-size: 12px;
+    }
+    .record__date div {
+        height: 30px;
+    }
+    .record__date div p {
+        font-size: 14px;
+        top: 5px;
+    }
+    /* 学習コンテンツ */
+    .record__content {
+        margin-top: 6px;
+        height: 80px;
+    }
+    .record__content h3 {
+        font-size: 12px;
+        height: 16px;
+        margin: 4px;
+    }
+    .record__content__wrapper {
+        
+    }
+    .c-box {
+        margin: 0;
+    }
+    .c-box-item {
+        height: 24px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .c-box-item i {
+        line-height: 24px;
+        font-size: 16px;
+    }
+    .modal__record__button {
+        display: block;
+    }
+    /* 学習言語 */
+    .record__language {
+        
+    }
+    .record__language h3 {
+        font-size: 12px;
+        height: 16px;
+        margin: 4px;
+    }
+    .l-box {
+        margin: 0;
+    }
+    .l-box-item {
+        height: 24px;
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .l-box-item i {
+        line-height: 24px;
+        font-size: 16px;
+    }
+    .r-container__2 {
+        height: 36vh;
+        display: block;
+    }
+    .r-container__2__content {
+        height: 32vh;
+        display: block;
+    }
+    .record__hours {
+        height: 60px;
+    }
+    .record__hours h3 {
+        font-size: 12px;
+        height: 16px;
+        margin: 4px;
+    }
+    .record__hours div {
+        height: 30px;
+    }
+    /* twitter用コメント */
+    .record__for__twitter h3 {
+        font-size: 12px;
+        height: 16px;
+        margin: 4px;
+    }
+    .record__for__twitter div {
+        height: calc(32vh - 90px);
+    }
+    /* twitterにシェアする */
+    .share__button {
+        margin-top: 10px;
+    }
+    /* 記録・投稿ボタン */
+    .modal__record__button {
+        width: 80vw;
+        position: absolute;
+        top: 80vh;
+        left: 10vw;
+    }
+    /* カレンダーのモーダル */
+    .calendar__modal::before {
+        height: 100%;
+        position: fixed;
+        inset: 0;
+    }
+    #calendar {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: calc(100% - 64px);
+        border-radius: 20px 20px 0 0;
+    }
+    #calendar h2 {
+        position: absolute;
+        width: 80vw;
+        left: 10vw;
+    }
+    #calendar table {
+        margin: 20vh auto;
+        position: absolute;
+        inset: 0;
+    }
+    .date__button {
+        position: absolute;
+        width: 80vw;
+        left: 10vw;
+    }
+    /* ローディング画面のモーダル */
+    .loading::before {
+        height: 100%;
+        position: fixed;
+        inset: 0;
+    }
+    .loading__content {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: calc(100% - 64px);
+        border-radius: 20px 20px 0 0;
+    }
+    .loading-circle {
+        position: absolute;
+        inset: 0;
+        margin: 40vh auto;
+    }
+    /* 記録・投稿完了画面のモーダル */
+    .post__completed::before {
+        height: 100%;
+        position: fixed;
+        inset: 0;
+    }
+    .post__completed__content {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: calc(100% - 64px);
+        border-radius: 20px 20px 0 0;
+    }
 }
