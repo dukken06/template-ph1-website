@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webapp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts" defer></script>
+    <script src="scripts/script.js" defer></script>
+</head>
+<body class="m-container">
+    <!--ヘッダー-->
+    <header>
+        <div class="header__inner">
+            <div>
+                <img src="img/logo.svg" alt="POSSE">
+            </div>
+            <div>
+                <p>
+                    4th week
+                </p>
+            </div>
+        </div>
+        <div class="header__button">
+            <span>
+                記録・投稿
+            </span>
+        </div>
+    </header>
+    <main>
+        <!--メイン-->
+        <div class="container">
+            <!--学習時間-->
+            <div class="container__hours">
+                <!--学習時間 数値-->
+                <div class="container__hours__data">
+                    <div class="container__hours__day">
+                        <p class="data__title">
+                            Today
+                        </p>
+                        <p class="data__hours">
+                            3
+                        </p>
+                        <p class="data__unit">
+                            hour
+                        </p>
+                    </div>
+                    <div class="container__hours__month">
+                        <p class="data__title">
+                            Month
+                        </p>
+                        <p class="data__hours">
+                            120
+                        </p>
+                        <p class="data__unit">
+                            hour
+                        </p>
+                    </div>
+                    <div class="container__hours__total">
+                        <p class="data__title">
+                            Total
+                        </p>
+                        <p class="data__hours">
+                            1348
+                        </p>
+                        <p class="data__unit">
+                            hour
+                        </p>
+                    </div>
+                </div>
+                <!--学習時間 グラフ-->
+                <div class="container__hours__graph">
+                    
+                </div>
+            </div>
+            <div class="container__content">
+                <!--学習内容-->
+                <div class="container__content__language">
+                    <h2>
+                        学習言語
+                    </h2>
+                    <div class="container__content__language__chart">
+
+                    </div>
+                </div>
+                <div class="container__content__material">
+                    <h2>
+                        学習コンテンツ
+                    </h2>
+                    <div class="container__content__material__chart">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--月 表示-->
+        <div class="month">
+            <p>
+                <i class="fa-solid fa-angle-left"></i>
+                <span class="month__show">
+                    2020年10月
+                </span>
+                <i class="fa-solid fa-angle-right"></i>
+            </p>
+        </div>
+        <!-- レスポンシブ用記録・投稿ボタン -->
+        <div class="button__area">
+            <div class="record__button__responsive">
+                <span>
+                    記録・投稿
+                </span>
+            </div>
+        </div>
+        <!--モーダル 表示-->
+        <div class="modal">
+            <div class="modal__content">
+                <div class="modal__close__button">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="r-container">
+                    <div class="r-container__1">
+                        <div class="record__date">
+                            <h3>
+                                学習日
+                            </h3>
+                            <div class="calendar__show">
+                                <p class="calendar__show__text__box">
+                                    2020年10月14日
+                                </p>
+                            </div>
+                        </div>
+                        <div class="record__content">
+                            <h3>
+                                学習コンテンツ(複数選択可)
+                            </h3>
+                            <div class="record__content__wrapper">
+                                <ul class="c-box">
+                                    <li class="c-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        N予備校
+                                    </li>
+                                    <li class="c-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        ドットインストール
+                                    </li>
+                                    <li class="c-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        POSSE課題
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="record__language">
+                            <h3>
+                                学習言語(複数選択可)
+                            </h3>
+                            <div class="record__language__wrapper">
+                                <ul class="l-box">
+                                    <li class="l-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        HTML
+                                    </li>
+                                    <li class="l-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        CSS
+                                    </li>
+                                    <li class="l-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        JavaScript
+                                    </li>
+                                    <li class="l-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        PHP
+                                    </li>
+                                    <li class="l-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        Laravel
+                                    </li>
+                                    <li class="l-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        SQL
+                                    </li>
+                                    <li class="l-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        SHELL
+                                    </li>
+                                    <li class="l-box-item">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        情報システム基礎(その他)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="r-container__2">
+                        <div class="r-container__2__content">
+                            <div class="record__hours">
+                                <h3>
+                                    学習時間
+                                </h3>
+                                <div>
+    
+                                </div>
+                            </div>
+                            <div class="record__for__twitter">
+                                <h3>
+                                    Twitter用コメント
+                                </h3>
+                                <div>
+                                    <textarea name="" id="comment__for__twitter" cols="30" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="share__button">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>
+                                Twitterにシェアする
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__record__button">
+                    <span>
+                        記録・投稿
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!--カレンダー用モーダル-->
+        <div class="calendar__modal">
+            <div id="calendar">
+                
+            </div>
+        </div>
+        <!-- ローディング画面のモーダル -->
+        <div class="loading">
+            <div class="loading__content">
+                <div class="loading-circle"></div>
+            </div>
+        </div>
+        <!-- 記録・投稿完了画面のボタン -->
+        <div class="post__completed">
+            <div class="post__completed__content">
+                <div class="modal__close__button">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <h3 class="completed__title">AWESOME!</h3>
+                <div class="completed__mark">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="completed__text">
+                    記録・投稿
+                    <br>
+                    完了しました
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
